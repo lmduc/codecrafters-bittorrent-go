@@ -36,9 +36,6 @@ func decodeBencode(bencodedString string) (string, error) {
 }
 
 func main() {
-	// You can use print statements as follows for debugging, they'll be visible when running tests.
-	fmt.Println("Logs from your program will appear here!")
-
 	command := os.Args[1]
 
 	if command == "decode" {
@@ -49,7 +46,7 @@ func main() {
 			return
 		}
 
-		fmt.Println(decoded)
+		fmt.Printf("%q\n", decoded)
 	} else {
 		fmt.Println("Unknown command: " + command)
 		os.Exit(1)
